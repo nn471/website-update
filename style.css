@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 body {
   height: 100vh;
@@ -11,28 +12,42 @@ body {
   height: 100%;
 }
 .img {
+  background-size: cover;
   height: 100%;
-  width: 100%;
 }
 .main-image-container {
   height: 100%;
-  width: 70%;
+  flex: 1;
+  overflow: hidden;
 }
 .side-bar-container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 600px;
-  background-color: #ddd7cd;
+  width: 500px;
+  background-color: #f5f3f0;
+  padding: 20px 40px 0 40px;
 }
 .header-side-bar {
-  height: 15%;
-  background-color: brown;
+  height: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 .return-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  grid-column: 1/3;
+  justify-self: start;
+}
+.stage {
+  justify-self: end;
+  align-self: center;
+}
+.personalise {
+  justify-self: start;
+  align-self: center;
 }
 .icon {
   width: 24px;
@@ -48,10 +63,13 @@ h1 {
 .progress-bar-container {
   background-color: rgb(215, 215, 215);
   width: 100%;
-  height: 20px;
+  height: 10px;
+  border-radius: 30px;
+  overflow: hidden;
+  grid-column: 1/3;
 }
 .progress {
-  background-color: rgb(116, 116, 116);
+  background-color: #a0cfd3;
   width: 25%;
   height: 100%;
 }
