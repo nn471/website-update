@@ -73,11 +73,26 @@ h1 {
   width: 25%;
   height: 100%;
 }
-.block-1 .person-container {
+.block-2 .person-container {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 16px;
+  padding-top: 20px;
 }
-.block-1 .person {
-  border: 1px solid black;
+.block-2 .person {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: start;
+  padding: 10px;
+  row-gap: 4px;
+  background-color: white;
+  border-radius: 12px;
+}
+.block-2 .person.selected {
+  border: 2px solid black;
+}
+
+.block-2 .person input {
+  justify-self: end;
 }
