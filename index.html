@@ -9,7 +9,7 @@
   <body>
     <div class="general-container">
       <div class="main-image-container">
-        <h1>PuRevo</h1>
+        <h1 class="logo">PuRevo</h1>
         <img src="tap-pic.jpg" class="img" />
       </div>
       <div class="side-bar-container">
@@ -35,32 +35,62 @@
           </div>
         </div>
         <div class="main-side-bar">
-          <div class="block-2">
+          <div class="block-1 block">
+            <h2>Choose a color:</h2>
+            <div class="option-container">
+              <label class="option-1 option">
+                <div class="filter-img-container">
+                  <img class="img" />
+                </div>
+                <span>Gray</span>
+                <span class="offered">Offered</span>
+                <input type="radio" name="radio" />
+              </label>
+            </div>
+            <label class="option-1 option">
+              <div class="filter-img-container">
+                <img class="img" />
+              </div>
+              <span>White</span>
+              <span class="offered">Offered</span>
+              <input type="radio" name="radio" />
+            </label>
+            <label class="option-1 option">
+              <div class="filter-img-container">
+                <img class="img" src="black-splash.png" />
+              </div>
+              <span>Black</span>
+              <span class="offered">Offered</span>
+              <input type="radio" name="radio" />
+            </label>
+          </div>
+          <div class="block-2 block">
             <h2>How many people in your house?</h2>
-            <div class="person-container">
-              <div class="person">
-                <label id="person1">1 person</label>
+            <div class="option-container">
+              <label class="option-2 option">
+                <span id="person1">1 person</span>
                 <input type="radio" name="person-radio" id="person1" />
                 <span>Perfect for single use</span>
-              </div>
-              <div class="person">
-                <label id="person2-3">2-3 people</label>
+              </label>
+              <label class="option-2 option">
+                <span id="person2-3">2-3 people</span>
                 <input type="radio" name="person-radio" id="person2-3" />
                 <span>Perfect for small household</span>
-              </div>
-              <div class="person selected">
-                <label id="person4-5">4-5 people</label>
+              </label>
+              <label class="option-2 option">
+                <span id="person4-5">4-5 people</span>
                 <input type="radio" name="person-radio" id="person4-5" />
                 <span>Perfect for single use</span>
-              </div>
-              <div class="person">
-                <label id="person5">5+ people</label>
+              </label>
+              <label class="option-2 option">
+                <span id="person5">5+ people</span>
                 <input type="radio" name="person-radio" id="person5" />
                 <span>Perfect for single use</span>
-              </div>
+              </label>
             </div>
           </div>
         </div>
+        <div class="footer-side-bar"></div>
       </div>
     </div>
     <script src="index.js"></script>
