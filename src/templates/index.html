@@ -14,7 +14,7 @@
       </div>
       <div class="side-bar-container">
         <div class="header-side-bar">
-          <button class="return-button">
+          <button class="return-button" onclick="switchBlock(-1)">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -29,13 +29,13 @@
             </svg>
           </button>
           <p class="personalise">Personalise your offer:</p>
-          <p class="stage">stage 1/4</p>
+          <p class="stage">stage</p>
           <div class="progress-bar-container">
             <div class="progress"></div>
           </div>
         </div>
         <div class="main-side-bar">
-          <div class="block-1 block">
+          <div id="block-1" class="block">
             <h2>Choose a color:</h2>
             <div class="option-container">
               <label class="option-1 option">
@@ -64,7 +64,7 @@
               </label>
             </div>
           </div>
-          <div class="block-2 block">
+          <div id="block-2" class="block">
             <h2>How many people in your house?</h2>
             <div class="option-container">
               <label class="option-2 option">
@@ -90,7 +90,11 @@
             </div>
           </div>
         </div>
-        <div class="footer-side-bar"><button></button></div>
+        <div class="footer-side-bar">
+          <button class="next-step-button" onclick="switchBlock(1)">
+            Next
+          </button>
+        </div>
       </div>
     </div>
     <script src="/src/scripts/index.js"></script>
