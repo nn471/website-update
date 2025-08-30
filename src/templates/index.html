@@ -36,6 +36,58 @@
         </div>
         <div class="main-side-bar">
           <div id="block-1" class="block">
+            <h2>How many people in your house?</h2>
+            <div class="option-container">
+              <label class="option-2 option">
+                <h3 id="person1">1 person</h3>
+                <input type="radio" name="person-radio" id="person1" />
+                <span>Perfect for single use</span>
+              </label>
+              <label class="option-2 option">
+                <h3 id="person2-3">2-3 people</h3>
+                <input type="radio" name="person-radio" id="person2-3" />
+                <span>Perfect for small household</span>
+              </label>
+              <label class="option-2 option">
+                <h3 id="person4-5">4-5 people</h3>
+                <input type="radio" name="person-radio" id="person4-5" />
+                <span>Perfect for single use</span>
+              </label>
+              <label class="option-2 option">
+                <h3 id="person5">5+ people</h3>
+                <input type="radio" name="person-radio" id="person5" />
+                <span>Perfect for single use</span>
+              </label>
+            </div>
+          </div>
+          <div id="block-2" class="block">
+            <h2>Choose the frequency of your subscription:</h2>
+            <div class="option-container">
+              <label class="option-3 option">
+                <h3>3 months of cartridges</h3>
+                <input type="radio" name="sub-radio" id="sub-1" />
+                <span class="sub-price">43.95€</span>
+                <span class="sub-price-per-day">0.48€/day</span>
+              </label>
+              <label class="option-3 option">
+                <h3>6 months of cartridges</h3>
+                <input type="radio" name="sub-radio" id="sub-1" />
+                <span class="sub-discount">-10%</span>
+                <span class="sub-old-price">87.90€</span>
+                <span class="sub-price">79.18€</span>
+                <span class="sub-price-per-day">0.43€</span>
+              </label>
+              <label class="option-3 option">
+                <h3>12 months of cartridges</h3>
+                <input type="radio" name="sub-radio" id="sub-1" />
+                <span class="sub-discount">-10%</span>
+                <span class="sub-old-price">175.80€</span>
+                <span class="sub-price">140.84€</span>
+                <span class="sub-price-per-day">0.38€</span>
+              </label>
+            </div>
+          </div>
+          <div id="block-3" class="block">
             <h2>Choose a color:</h2>
             <div class="option-container">
               <label class="option-1 option">
@@ -64,37 +116,12 @@
               </label>
             </div>
           </div>
-          <div id="block-2" class="block">
-            <h2>How many people in your house?</h2>
-            <div class="option-container">
-              <label class="option-2 option">
-                <h3 id="person1">1 person</h3>
-                <input type="radio" name="person-radio" id="person1" />
-                <span>Perfect for single use</span>
-              </label>
-              <label class="option-2 option">
-                <h3 id="person2-3">2-3 people</h3>
-                <input type="radio" name="person-radio" id="person2-3" />
-                <span>Perfect for small household</span>
-              </label>
-              <label class="option-2 option">
-                <h3 id="person4-5">4-5 people</h3>
-                <input type="radio" name="person-radio" id="person4-5" />
-                <span>Perfect for single use</span>
-              </label>
-              <label class="option-2 option">
-                <h3 id="person5">5+ people</h3>
-                <input type="radio" name="person-radio" id="person5" />
-                <span>Perfect for single use</span>
-              </label>
-            </div>
-          </div>
+
+          <div id="block-4" class="block"></div>
         </div>
-        <div class="footer-side-bar">
-          <button class="next-step-button" onclick="switchBlock(1)">
-            Next
-          </button>
-        </div>
+      </div>
+      <div class="footer-side-bar">
+        <button class="next-step-button" onclick="switchBlock(1)">Next</button>
       </div>
     </div>
     <script src="/src/scripts/index.js"></script>

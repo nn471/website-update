@@ -9,6 +9,7 @@ blocks[currentBlock].style.display = "block";
 stage.innerText = `stage ${currentBlock + 1}/${blocks.length}`;
 progress.style.width = `${currentBlock + 1 * 25}%`;
 
+switchBlock(0);
 function switchBlock(step) {
   let newIndex = currentBlock + step;
   if (newIndex < 0 || newIndex > lastBlock) return;
