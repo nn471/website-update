@@ -34,6 +34,7 @@ body {
   width: 450px;
   background-color: #f5f3f0;
   padding: 20px 40px 0 40px;
+  position: relative;
 }
 .header-side-bar {
   height: 120px;
@@ -87,6 +88,7 @@ body {
   border-radius: 12px;
   padding: 16px;
   position: relative;
+  cursor: pointer;
 }
 .option-container {
   display: flex;
@@ -134,7 +136,7 @@ h2 {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   padding: 6px 0;
   background-color: #aeeeee;
   border: 1px solid #8bbebe;
@@ -158,7 +160,60 @@ h2 {
   width: 50px;
   grid-row: 1/3;
 }
+.footer-side-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  background-color: #ffffff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.guarantee-footer {
+  width: 100%;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  font-size: 14px;
+  grid-column: 1/-1;
+}
+.guarantee-footer .icon {
+  height: 14px;
+  width: 14px;
+}
+.footer-price-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  padding: 16px 24px;
+}
+.footer-total {
+  font-size: 22px;
+  font-weight: lighter;
+}
+.footer-price-per-day {
+  font-size: 16px;
+}
 .next-step-button {
-  width: 50px;
-  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 180px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  background-color: #6d72c3;
+  color: #ffffff;
+  font-size: 18px;
+  align-self: center;
+  border-radius: 30px;
+}
+.next-step-button .icon {
+  height: 16px;
+  width: 16px;
 }
