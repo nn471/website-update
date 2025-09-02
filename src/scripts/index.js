@@ -7,9 +7,6 @@ const footerTotal = document.querySelector(".footer-total strong");
 let currentBlock = 0;
 let lastBlock = blocks.length - 1;
 
-let arrayPrice = [0, 0, 0, 0];
-let total = 0;
-
 blocks[currentBlock].style.display = "flex";
 stage.innerText = `stage ${currentBlock + 1}/${blocks.length}`;
 progress.style.width = `${currentBlock + 1 * 25}%`;
@@ -27,31 +24,23 @@ function switchBlock(step) {
   progress.style.width = `${(newIndex + 1) * 25}%`;
 
   currentBlock = newIndex;
-  getSecondOptionPrice(currentBlock);
 }
+let newArray = [0, 0, 0, 0];
+update();
+function update() {
+  const selected = document.querySelectorAll(`input[type=radio]:checked`);
+  getSecondOptionPrice(selected[0].value);
 
-function showTotal(value) {
-  footerTotal.innerText = `${(total + parseFloat(value)).toFixed(2)}€`;
-}
-function increaseTotal() {
-  var selected = document.querySelector(
-    `input[name=radio-${currentBlock + 1}]:checked`
-  ).value;
-  arrayPrice[currentBlock] = parseFloat(selected) || 0;
-  total += arrayPrice[currentBlock];
-  console.log(arrayPrice);
-}
-function reduceTotal() {
-  if (currentBlock - 1 < 0) return;
-  total -= arrayPrice[currentBlock - 1];
-  arrayPrice[currentBlock - 1] = 0;
-  footerTotal.innerText = `${total.toFixed(2)}€`;
-  console.log(arrayPrice);
-}
-function getSecondOptionPrice(currentBlock) {
-  if (arrayPrice[0] != 0 && currentBlock == 1) {
-    document.getElementById("radio-2-1").value = arrayPrice[0];
-    document.getElementById("radio-2-2").value = arrayPrice[0] * 2;
-    document.getElementById("radio-2-3").value = arrayPrice[0] * 4;
+  for (let i = 0; i < selected.length; i++) {
+    newArray[i] = parseFloat(selected[i].value);
   }
+  console.log(newArray);
+  footerTotal.innerText =
+    (newArray[0] + newArray[1] + newArray[2] + newArray[3]).toFixed(2) + "€";
+}
+function getSecondOptionPrice(element) {
+  var elementFloat = parseFloat(element);
+  document.getElementById("radio-2-1").value = 0;
+  document.getElementById("radio-2-2").value = elementFloat * 2 - elementFloat;
+  document.getElementById("radio-2-3").value = elementFloat * 4 - elementFloat;
 }

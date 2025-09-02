@@ -4,8 +4,10 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+/* Big general containers */
 body {
   height: 100vh;
+  max-height: 100vh;
 }
 .general-container {
   display: grid;
@@ -19,6 +21,37 @@ body {
   flex: 1;
   overflow: hidden;
 }
+.side-bar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 520px;
+  width: 520px;
+  background-color: #f7f6f2;
+  position: relative;
+}
+.header-side-bar {
+  height: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 30px 50px 0 50px;
+}
+.main-side-bar {
+  padding: 30px 50px 0 50px;
+  flex: 1;
+  overflow-y: auto;
+}
+.footer-side-bar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 12px;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100%;
+  flex-shrink: 0;
+}
 .img {
   height: 100%;
 }
@@ -29,21 +62,7 @@ body {
   top: 25px;
   left: 50px;
 }
-.side-bar-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 520px;
-  background-color: #f7f6f2;
-  padding: 30px 50px 0 50px;
-  position: relative;
-}
-.header-side-bar {
-  height: 120px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
+
 .return-button {
   background-color: transparent;
   border: none;
@@ -91,7 +110,7 @@ body {
   padding: 16px;
   position: relative;
   cursor: pointer;
-  height: 90px;
+  height: auto;
 }
 .option-container {
   display: flex;
@@ -129,9 +148,10 @@ h2 {
 }
 .option-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   grid-template-rows: 1fr 1fr;
   align-items: center;
+  row-gap: 8px;
 }
 .option-2 h3 {
   grid-column: 1/-1;
@@ -150,9 +170,24 @@ h2 {
   height: 16px;
   width: 16px;
 }
-.blue-block.sub-discount {
+.sub-discount {
   display: inline-block;
-  padding: 8px 12px;
+  padding: 6px 12px;
+  background-color: #d8f9fd;
+  border: 1px solid #a1f0fa;
+  border-radius: 30px;
+}
+.sub-old-price {
+  text-decoration: line-through;
+  color: #828282;
+}
+.sub-price {
+  font-weight: bold;
+}
+.sub-price-per-day {
+  justify-self: right;
+  font-weight: 400;
+  font-size: 14px;
 }
 .option-3 {
   display: flex;
@@ -160,7 +195,7 @@ h2 {
   gap: 16px;
 }
 .filter-img-container {
-  height: 100%;
+  height: 90px;
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
@@ -171,14 +206,7 @@ h2 {
   height: 110%;
   width: 100%;
 }
-.footer-side-bar {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-  align-items: center;
-  background-color: #ffffff;
-  width: 100%;
-}
+
 .guarantee-footer {
   width: 100%;
   background-color: #f1fdff;
@@ -197,6 +225,7 @@ h2 {
 .footer-total {
   font-size: 22px;
   font-weight: lighter;
+  padding-left: 12px;
 }
 .footer-price-per-day {
   font-size: 16px;
@@ -206,7 +235,7 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 100%;
+  max-width: 100%;
   height: 60px;
   border: none;
   cursor: pointer;
@@ -215,6 +244,7 @@ h2 {
   font-size: 18px;
   align-self: center;
   border-radius: 30px;
+  margin: 12px;
 }
 .next-step-button .icon {
   height: 16px;
