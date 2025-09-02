@@ -18,7 +18,6 @@ body {
 .main-image-container {
   grid-row: 1/-1;
   height: 100%;
-  flex: 1;
   overflow: hidden;
 }
 .side-bar-container {
@@ -29,24 +28,21 @@ body {
   width: 520px;
   background-color: #f7f6f2;
   position: relative;
+  padding: 30px 50px 0 50px;
 }
 .header-side-bar {
   height: 120px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  padding: 30px 50px 0 50px;
 }
 .main-side-bar {
-  padding: 30px 50px 0 50px;
   flex: 1;
   overflow-y: auto;
 }
 .footer-side-bar {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-  column-gap: 12px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: #ffffff;
   width: 100%;
@@ -62,7 +58,6 @@ body {
   top: 25px;
   left: 50px;
 }
-
 .return-button {
   background-color: transparent;
   border: none;
@@ -126,7 +121,7 @@ body {
   top: 15px;
   right: 15px;
 }
-h2 {
+.option h2 {
   font-weight: 600;
   font-size: 20px;
 }
@@ -156,7 +151,7 @@ h2 {
 .option-2 h3 {
   grid-column: 1/-1;
 }
-.blue-block {
+.no-commitment {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,12 +161,12 @@ h2 {
   border-radius: 30px;
   font-size: 14px;
 }
-.blue-block .icon {
+.no-commitment .icon {
   height: 16px;
   width: 16px;
 }
-.sub-discount {
-  display: inline-block;
+.blue-block {
+  display: inline-flex;
   padding: 6px 12px;
   background-color: #d8f9fd;
   border: 1px solid #a1f0fa;
@@ -206,7 +201,16 @@ h2 {
   height: 110%;
   width: 100%;
 }
-
+.offered {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
 .guarantee-footer {
   width: 100%;
   background-color: #f1fdff;
@@ -222,10 +226,16 @@ h2 {
   height: 14px;
   width: 14px;
 }
+.footer-functionable-part {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
 .footer-total {
   font-size: 22px;
   font-weight: lighter;
   padding-left: 12px;
+  display: inline-block;
 }
 .footer-price-per-day {
   font-size: 16px;
@@ -235,7 +245,7 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  max-width: 100%;
+  flex: 1;
   height: 60px;
   border: none;
   cursor: pointer;
