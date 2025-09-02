@@ -14,7 +14,10 @@
       </div>
       <div class="side-bar-container">
         <div class="header-side-bar">
-          <button class="return-button" onclick="switchBlock(-1)">
+          <button
+            class="return-button"
+            onclick="reduceTotal(); switchBlock(-1)"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -39,24 +42,45 @@
             <h2>How many people in your house?</h2>
             <div class="option-container">
               <label class="option-1 option">
-                <h3 id="person1">1 person</h3>
-                <input type="radio" name="person-radio" id="person-1" checked />
+                <h3>1 person</h3>
+                <input
+                  type="radio"
+                  name="radio-1"
+                  checked
+                  value="53.99"
+                  onclick="showTotal(this.value)"
+                />
                 <span>Perfect for single use</span>
               </label>
               <label class="option-1 option">
-                <h3 id="person2-3">2-3 people</h3>
-                <input type="radio" name="person-radio" id="person-2" />
+                <h3>2-3 people</h3>
+                <input
+                  type="radio"
+                  name="radio-1"
+                  value="62.83"
+                  onclick="showTotal(this.value)"
+                />
                 <span>Perfect for small household</span>
               </label>
               <label class="option-1 option">
-                <h3 id="person4-5">4-5 people</h3>
-                <input type="radio" name="person-radio" id="person-3" />
-                <span>Perfect for single use</span>
+                <h3>4-5 people</h3>
+                <input
+                  type="radio"
+                  name="radio-1"
+                  value="71.66"
+                  onclick="showTotal(this.value)"
+                />
+                <span>Ideal for the whole family </span>
               </label>
               <label class="option-1 option">
-                <h3 id="person5">5+ people</h3>
-                <input type="radio" name="person-radio" id="person-4" />
-                <span>Perfect for single use</span>
+                <h3>5+ people</h3>
+                <input
+                  type="radio"
+                  name="radio-1"
+                  value="80.50"
+                  onclick="showTotal(this.value)"
+                />
+                <span>Ideal for large families</span>
               </label>
             </div>
           </div>
@@ -83,13 +107,24 @@
             <div class="option-container">
               <label class="option-2 option">
                 <h3>3 months of cartridges</h3>
-                <input type="radio" name="sub-radio" id="sub-1" checked />
+                <input
+                  type="radio"
+                  name="radio-2"
+                  id="radio-2-1"
+                  onclick="showTotal(this.value)"
+                />
                 <span class="sub-price">43.95€</span>
                 <span class="sub-price-per-day">0.48€/day</span>
               </label>
               <label class="option-2 option">
                 <h3>6 months of cartridges</h3>
-                <input type="radio" name="sub-radio" id="sub-2" />
+                <input
+                  type="radio"
+                  name="radio-2"
+                  id="radio-2-2"
+                  checked
+                  onclick="showTotal(this.value)"
+                />
                 <div class="sub-price-changes">
                   <span class="sub-discount blue-block">-10%</span>
                   <span class="sub-old-price">87.90€</span>
@@ -100,7 +135,12 @@
               </label>
               <label class="option-2 option">
                 <h3>12 months of cartridges</h3>
-                <input type="radio" name="sub-radio" id="sub-3" />
+                <input
+                  type="radio"
+                  name="radio-2"
+                  id="radio-2-3"
+                  onclick="showTotal(this.value)"
+                />
                 <div class="sub-price-changes">
                   <span class="sub-discount blue-block">-10%</span>
                   <span class="sub-old-price">175.80€</span>
@@ -115,27 +155,27 @@
             <div class="option-container">
               <label class="option-3 option">
                 <div class="filter-img-container">
-                  <img class="img" src="/src/public/gray.webp" />
+                  <img class="filter-img" src="/src/public/gray.webp" />
                 </div>
                 <h3>Gray</h3>
                 <span class="offered">Offered</span>
-                <input type="radio" name="radio" checked />
+                <input type="radio" name="radio-3" checked />
               </label>
               <label class="option-3 option">
                 <div class="filter-img-container">
-                  <img class="img" src="/src/public/white.webp" />
+                  <img class="filter-img" src="/src/public/white.webp" />
                 </div>
                 <h3>White</h3>
-                <span class="offered">Offered</span>
-                <input type="radio" name="radio" />
+                <span class="offered">+9.90€</span>
+                <input type="radio" name="radio-3" />
               </label>
               <label class="option-3 option">
                 <div class="filter-img-container">
-                  <img class="img" src="/src/public/black.webp" />
+                  <img class="filter-img" src="/src/public/black.webp" />
                 </div>
                 <h3>Black</h3>
-                <input type="radio" name="radio" />
-                <span class="offered">Offered</span>
+                <input type="radio" name="radio-3" />
+                <span class="offered">+9.90€</span>
               </label>
             </div>
           </div>
@@ -158,13 +198,11 @@
           </svg>
           &nbsp;30-day money-back guarantee</span
         >
-        <div class="footer-price-container">
-          <span class="footer-total">Total is <strong>44.09€</strong></span>
-          <span class="footer-price-per-day"
-            >That is <strong>0.69€</strong> a day</span
-          >
-        </div>
-        <button class="next-step-button" onclick="switchBlock(1)">
+        <span class="footer-total">Total is <strong>53.99€</strong></span>
+        <button
+          class="next-step-button"
+          onclick="increaseTotal(); switchBlock(1)"
+        >
           Next<svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
