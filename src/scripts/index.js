@@ -25,18 +25,25 @@ function switchBlock(step) {
 
   currentBlock = newIndex;
 }
-let newArray = [0, 0, 0, 0];
+
 update();
 function update() {
-  const selected = document.querySelectorAll(`input[type=radio]:checked`);
-  getSecondOptionPrice(selected[0].value);
+  const selected = document.querySelectorAll(`input:checked`);
 
-  for (let i = 0; i < selected.length; i++) {
-    newArray[i] = parseFloat(selected[i].value);
+  let total = 0;
+
+  selected.forEach((input) => {
+    total += parseFloat(input.value) || 0;
+  });
+
+  const baseRadio1 = document.querySelector(`input[name="radio-1"]:checked`);
+  if (baseRadio1) {
+    getSecondOptionPrice(baseRadio1.value);
   }
-  console.log(newArray);
-  footerTotal.innerText =
-    (newArray[0] + newArray[1] + newArray[2] + newArray[3]).toFixed(2) + "€";
+
+  console.log("Checked inputs:", selected, "Total:", total);
+
+  footerTotal.innerText = total.toFixed(2) + "€";
 }
 function getSecondOptionPrice(element) {
   var elementFloat = parseFloat(element);

@@ -46,7 +46,7 @@
                   value="53.99"
                   onclick="update()"
                 />
-                <span>Perfect for single use</span>
+                <span class="small-gray-text">Perfect for single use</span>
               </label>
               <label class="option-1 option">
                 <h3>2-3 people</h3>
@@ -57,7 +57,7 @@
                   checked
                   onclick="update()"
                 />
-                <span>Perfect for small household</span>
+                <span class="small-gray-text">Perfect for small household</span>
               </label>
               <label class="option-1 option">
                 <h3>4-5 people</h3>
@@ -67,7 +67,7 @@
                   value="71.66"
                   onclick="update()"
                 />
-                <span>Ideal for the whole family </span>
+                <span class="small-gray-text">Ideal for the whole family </span>
               </label>
               <label class="option-1 option">
                 <h3>5+ people</h3>
@@ -77,13 +77,13 @@
                   value="80.50"
                   onclick="update()"
                 />
-                <span>Ideal for large families</span>
+                <span class="small-gray-text">Ideal for large families</span>
               </label>
             </div>
           </div>
           <div id="block-2" class="block">
             <h2>Choose the frequency of your subscription:</h2>
-            <span class="no-commitment"
+            <span class="no-commitment blue-block"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -113,7 +113,7 @@
                   onclick="update()"
                 />
                 <div class="sub-price-changes">
-                  <span class="sub-price">43.95€</span>
+                  <span class="total-price">43.95€</span>
                 </div>
                 <span class="sub-price-per-day">0.48€/day</span>
               </label>
@@ -129,7 +129,7 @@
                 <div class="sub-price-changes">
                   <span class="blue-block">-10%</span>
                   <span class="sub-old-price">87.90€</span>
-                  <span class="sub-price">79.18€</span>
+                  <span class="total-price">79.18€</span>
                 </div>
 
                 <span class="sub-price-per-day">0.43€/day</span>
@@ -146,7 +146,7 @@
                 <div class="sub-price-changes">
                   <span class="blue-block">-10%</span>
                   <span class="sub-old-price">175.80€</span>
-                  <span class="sub-price">140.84€</span>
+                  <span class="total-price">140.84€</span>
                 </div>
                 <span class="sub-price-per-day">0.38€/day</span>
               </label>
@@ -161,7 +161,7 @@
                 </div>
                 <div class="price-container">
                   <h3>Gray</h3>
-                  <span class="offered blue-block">Offered</span>
+                  <span class="total-price blue-block">Offered</span>
                 </div>
 
                 <input
@@ -178,7 +178,7 @@
                 </div>
                 <div class="price-container">
                   <h3>White</h3>
-                  <span class="offered">+9.90€</span>
+                  <span class="total-price">+9.90€</span>
                 </div>
 
                 <input
@@ -194,7 +194,7 @@
                 </div>
                 <div class="price-container">
                   <h3>Black</h3>
-                  <span class="offered">+9.90€</span>
+                  <span class="total-price total-price">+9.90€</span>
                 </div>
                 <input
                   type="radio"
@@ -205,7 +205,47 @@
               </label>
             </div>
           </div>
-          <div id="block-4" class="block"></div>
+          <div id="block-4" class="block">
+            <h2>Our customers often add:</h2>
+            <div class="option-container">
+              <label class="option-4 option">
+                <div class="image-4-container">
+                  <img class="image-4" src="/src/public/pureva-care.webp" />
+                </div>
+                <div class="information-4">
+                  <h3>360 Aerator</h3>
+                  <span class="small-gray-text"
+                    >Optimize flow and save water.</span
+                  >
+                  <span class="total-price">8.76€</span>
+                  <input
+                    type="checkbox"
+                    name="checkbox-4"
+                    value="8.76"
+                    onclick="update()"
+                  />
+                </div>
+              </label>
+              <label class="option-4 option">
+                <div class="image-4-container">
+                  <img class="image-4" src="/src/public/360.webp" />
+                </div>
+                <div class="information-4">
+                  <h3>PurevaCare+</h3>
+                  <span class="small-gray-text"
+                    >Comprehensive lifetime warranty.</span
+                  >
+                  <span class="total-price">17.61€</span>
+                  <input
+                    type="checkbox"
+                    name="checkbox-4"
+                    value="17.61"
+                    onclick="update()"
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
       <footer class="footer-side-bar">
@@ -225,7 +265,9 @@
           &nbsp;30-day money-back guarantee</span
         >
         <div class="footer-functionable-part">
-          <span class="footer-total">Total is <strong>53.99€</strong></span>
+          <span class="footer-total"
+            >Total is <strong class="total-price">53.99€</strong></span
+          >
           <button class="next-step-button" onclick="switchBlock(1)">
             Next<svg
               xmlns="http://www.w3.org/2000/svg"
