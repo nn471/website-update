@@ -10,11 +10,11 @@
     <div class="general-container">
       <div class="main-image-container">
         <h1 class="logo">PuRevo</h1>
-        <img src="/src/public/tap-pic.jpg" class="img" />
+        <img src="/src/public/main-image.webp" class="img" />
       </div>
       <div class="side-bar-container">
         <div class="header-side-bar">
-          <button class="return-button">
+          <button class="return-button" onclick="switchBlock(-1)">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -29,69 +29,263 @@
             </svg>
           </button>
           <p class="personalise">Personalise your offer:</p>
-          <p class="stage">stage 1/4</p>
+          <p class="stage">stage</p>
           <div class="progress-bar-container">
             <div class="progress"></div>
           </div>
         </div>
         <div class="main-side-bar">
-          <div class="block-1 block">
-            <h2>Choose a color:</h2>
-            <div class="option-container">
-              <label class="option-1 option">
-                <div class="filter-img-container">
-                  <img class="img" />
-                </div>
-                <span>Gray</span>
-                <span class="offered">Offered</span>
-                <input type="radio" name="radio" />
-              </label>
-            </div>
-            <label class="option-1 option">
-              <div class="filter-img-container">
-                <img class="img" />
-              </div>
-              <span>White</span>
-              <span class="offered">Offered</span>
-              <input type="radio" name="radio" />
-            </label>
-            <label class="option-1 option">
-              <div class="filter-img-container">
-                <img class="img" src="/src/public/black-splash.png" />
-              </div>
-              <span>Black</span>
-              <span class="offered">Offered</span>
-              <input type="radio" name="radio" />
-            </label>
-          </div>
-          <div class="block-2 block">
+          <div id="block-1" class="block">
             <h2>How many people in your house?</h2>
             <div class="option-container">
+              <label class="option-1 option">
+                <h3>1 person</h3>
+                <input
+                  type="radio"
+                  name="radio-1"
+                  value="53.99"
+                  onclick="update()"
+                />
+                <span class="small-gray-text">Perfect for single use</span>
+              </label>
+              <label class="option-1 option">
+                <h3>2-3 people</h3>
+                <input
+                  type="radio"
+                  name="radio-1"
+                  value="62.83"
+                  checked
+                  onclick="update()"
+                />
+                <span class="small-gray-text">Perfect for small household</span>
+              </label>
+              <label class="option-1 option">
+                <h3>4-5 people</h3>
+                <input
+                  type="radio"
+                  name="radio-1"
+                  value="71.66"
+                  onclick="update()"
+                />
+                <span class="small-gray-text">Ideal for the whole family </span>
+              </label>
+              <label class="option-1 option">
+                <h3>5+ people</h3>
+                <input
+                  type="radio"
+                  name="radio-1"
+                  value="80.50"
+                  onclick="update()"
+                />
+                <span class="small-gray-text">Ideal for large families</span>
+              </label>
+            </div>
+          </div>
+          <div id="block-2" class="block">
+            <h2>Choose the frequency of your subscription:</h2>
+            <span class="no-commitment blue-block"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 12.75 6 6 9-13.5"
+                />
+              </svg>
+              &nbsp;<strong>No commitment!</strong>&nbsp;Cancel anytime with 1
+              click</span
+            >
+            <div class="option-container">
               <label class="option-2 option">
-                <span id="person1">1 person</span>
-                <input type="radio" name="person-radio" id="person1" />
-                <span>Perfect for single use</span>
+                <h3>3 months of cartridges</h3>
+                <input
+                  type="radio"
+                  name="radio-2"
+                  id="radio-2-1"
+                  checked
+                  value="0"
+                  onclick="update()"
+                />
+                <div class="sub-price-changes">
+                  <span class="total-price">43.95€</span>
+                </div>
+                <span class="sub-price-per-day">0.48€/day</span>
               </label>
               <label class="option-2 option">
-                <span id="person2-3">2-3 people</span>
-                <input type="radio" name="person-radio" id="person2-3" />
-                <span>Perfect for small household</span>
+                <h3>6 months of cartridges</h3>
+                <input
+                  type="radio"
+                  name="radio-2"
+                  id="radio-2-2"
+                  value="0"
+                  onclick="update()"
+                />
+                <div class="sub-price-changes">
+                  <span class="blue-block">-10%</span>
+                  <span class="sub-old-price">87.90€</span>
+                  <span class="total-price">79.18€</span>
+                </div>
+
+                <span class="sub-price-per-day">0.43€/day</span>
               </label>
               <label class="option-2 option">
-                <span id="person4-5">4-5 people</span>
-                <input type="radio" name="person-radio" id="person4-5" />
-                <span>Perfect for single use</span>
+                <h3>12 months of cartridges</h3>
+                <input
+                  type="radio"
+                  name="radio-2"
+                  id="radio-2-3"
+                  value="0"
+                  onclick="update()"
+                />
+                <div class="sub-price-changes">
+                  <span class="blue-block">-10%</span>
+                  <span class="sub-old-price">175.80€</span>
+                  <span class="total-price">140.84€</span>
+                </div>
+                <span class="sub-price-per-day">0.38€/day</span>
               </label>
-              <label class="option-2 option">
-                <span id="person5">5+ people</span>
-                <input type="radio" name="person-radio" id="person5" />
-                <span>Perfect for single use</span>
+            </div>
+          </div>
+          <div id="block-3" class="block">
+            <h2>Choose a color:</h2>
+            <div class="option-container">
+              <label class="option-3 option">
+                <div class="filter-img-container">
+                  <img class="filter-img" src="/src/public/gray.webp" />
+                </div>
+                <div class="price-container">
+                  <h3>Gray</h3>
+                  <span class="total-price blue-block">Offered</span>
+                </div>
+
+                <input
+                  type="radio"
+                  name="radio-3"
+                  value="0"
+                  checked
+                  onclick="update()"
+                />
+              </label>
+              <label class="option-3 option">
+                <div class="filter-img-container">
+                  <img class="filter-img" src="/src/public/white.webp" />
+                </div>
+                <div class="price-container">
+                  <h3>White</h3>
+                  <span class="total-price">+9.90€</span>
+                </div>
+
+                <input
+                  type="radio"
+                  name="radio-3"
+                  value="9.90"
+                  onclick="update()"
+                />
+              </label>
+              <label class="option-3 option">
+                <div class="filter-img-container">
+                  <img class="filter-img" src="/src/public/black.webp" />
+                </div>
+                <div class="price-container">
+                  <h3>Black</h3>
+                  <span class="total-price total-price">+9.90€</span>
+                </div>
+                <input
+                  type="radio"
+                  name="radio-3"
+                  value="9.90"
+                  onclick="update()"
+                />
+              </label>
+            </div>
+          </div>
+          <div id="block-4" class="block">
+            <h2>Our customers often add:</h2>
+            <div class="option-container">
+              <label class="option-4 option">
+                <div class="image-4-container">
+                  <img class="image-4" src="/src/public/pureva-care.webp" />
+                </div>
+                <div class="information-4">
+                  <h3>360 Aerator</h3>
+                  <span class="small-gray-text"
+                    >Optimize flow and save water.</span
+                  >
+                  <span class="total-price">8.76€</span>
+                  <input
+                    type="checkbox"
+                    name="checkbox-4"
+                    value="8.76"
+                    onclick="update()"
+                  />
+                </div>
+              </label>
+              <label class="option-4 option">
+                <div class="image-4-container">
+                  <img class="image-4" src="/src/public/360.webp" />
+                </div>
+                <div class="information-4">
+                  <h3>PurevaCare+</h3>
+                  <span class="small-gray-text"
+                    >Comprehensive lifetime warranty.</span
+                  >
+                  <span class="total-price">17.61€</span>
+                  <input
+                    type="checkbox"
+                    name="checkbox-4"
+                    value="17.61"
+                    onclick="update()"
+                  />
+                </div>
               </label>
             </div>
           </div>
         </div>
-        <div class="footer-side-bar"></div>
       </div>
+      <footer class="footer-side-bar">
+        <span class="guarantee-footer"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          &nbsp;30-day money-back guarantee</span
+        >
+        <div class="footer-functionable-part">
+          <span class="footer-total"
+            >Total is <strong class="total-price">53.99€</strong></span
+          >
+          <button class="next-step-button" onclick="switchBlock(1)">
+            Next<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </button>
+        </div>
+      </footer>
     </div>
     <script src="/src/scripts/index.js"></script>
   </body>
