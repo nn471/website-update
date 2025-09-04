@@ -190,6 +190,19 @@ body {
   font-weight: 400;
   font-size: 14px;
 }
+.best-seller {
+  position: relative;
+}
+.best-seller::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 20px;
+  background-color: red;
+}
 /* Block 3 */
 .option-3 {
   display: flex;
@@ -221,8 +234,8 @@ body {
   display: flex;
 }
 .image-4-container {
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   overflow: hidden;
 }
 .image-4 {
